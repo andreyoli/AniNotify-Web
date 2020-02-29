@@ -1,12 +1,15 @@
 import React from 'react'
-import './App.css'
+import GlobalStyle from './styles/global'
+import Navbar from './components/Navbar'
 
-import Navbar from './components/navbar'
+import Routes from './routes'
 
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Navbar />
+      <Routes />
     </>
   )
 }
