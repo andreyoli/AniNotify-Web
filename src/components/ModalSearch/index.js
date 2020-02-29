@@ -47,6 +47,7 @@ export default ({ isOpen, onRequestClose }) => {
         placeholder="Find your favorite anime"
         value={name}
         onChange={handleChange}
+        autoFocus
       />
       <CloseModal onClick={onRequestClose} />
       <Results>
