@@ -23,7 +23,7 @@ export const ModalSearch = styled(Modal)`
   top: 0;
   left: 0;
 
-  backdrop-filter: saturate(100%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
   transition: all 0.5s ease;
 
   display: flex;

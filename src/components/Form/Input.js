@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { opacify } from 'polished'
 
 export const Input = styled.input`
   justify-self: center;
   border: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid ${props => opacify(-0.6, props.theme.colors.text)};
   padding: 10px;
   font-size: 18px;
   outline: none;
@@ -12,10 +13,15 @@ export const Input = styled.input`
   padding: 5px 10px;
 
   &:hover {
-    border-color: rgba(255, 255, 255, 0.9);
+    border-color: ${props => opacify(1, props.theme.colors.text)};
+    &::placeholder {
+      color: ${props => opacify(0.3, props.theme.colors.text)};
+    }
   }
   &::placeholder {
     text-align: center;
+    color: ${props => opacify(-0.6, props.theme.colors.text)};
+    transition: all 500ms;
   }
 
   @media (max-width: 768px) {

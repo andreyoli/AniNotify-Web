@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import { opacify } from 'polished'
 
 export const Button = styled.button`
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid ${props => opacify(-0.3, props.theme.colors.primary)};
+  color: ${props => opacify(-0.3, props.theme.colors.primary)};
   background: transparent;
   border-radius: 20px;
   padding: 5px 35px;
@@ -14,8 +15,8 @@ export const Button = styled.button`
   outline: none;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
-    border-color: rgba(255, 255, 255, 0.9);
+    color: ${props => opacify(1, props.theme.colors.primary)};
+    text-shadow: 0 0 3px ${props => opacify(-0.6, props.theme.colors.primary)};
+    border-color: ${props => opacify(1, props.theme.colors.primary)};
   }
 `

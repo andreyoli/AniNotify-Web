@@ -1,15 +1,18 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
+
 import GlobalStyle from './styles/global'
-import Navbar from './components/Navbar'
+import dark from './styles/themes/dark'
 
 import Routes from './routes'
 
 function App() {
   return (
     <>
-      <GlobalStyle />
-      <Navbar />
-      <Routes />
+      <ThemeProvider theme={dark}>
+        <GlobalStyle />
+        <Routes />
+      </ThemeProvider>
     </>
   )
 }

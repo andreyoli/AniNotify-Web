@@ -42,6 +42,7 @@ export const Nav = styled.nav`
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
+  height: 100px;
   @media (max-width: 1024px) {
     display: flex;
     justify-content: space-around;

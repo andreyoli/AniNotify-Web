@@ -22,17 +22,17 @@ export default function SearchResult({ name, searchResults }) {
         return filterAnimes(anime, name)
       })
       .map(anime => (
-        <li>
-          <SearchItem
-            key={anime.id}
-            img={anime.coverImage.medium}
-            title={anime.title.romaji}
-            desc={anime.description}
-            nextEp={
-              anime.nextAiringEpisode ? anime.nextAiringEpisode.airingAt : null
-            }
-          />
-        </li>
+        <SearchItem
+          key={anime.id}
+          img={anime.coverImage.large}
+          coverColor={anime.coverImage.color}
+          title={anime.title.romaji}
+          desc={anime.description}
+          nextEp={
+            anime.nextAiringEpisode ? anime.nextAiringEpisode.airingAt : null
+          }
+          score={anime.averageScore}
+        />
       ))
   }
 

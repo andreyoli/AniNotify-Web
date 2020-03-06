@@ -17,6 +17,7 @@ function listAnimes(name) {
           romaji
           english
         }
+        averageScore
         seasonYear
         description
         status
@@ -31,7 +32,9 @@ function listAnimes(name) {
         }
         bannerImage
         coverImage {
-          medium
+          large
+          extraLarge
+          color
         }
       }
     }
